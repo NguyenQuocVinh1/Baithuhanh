@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Nguyen Quoc Vinh</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Trang Chủ</a></li>
+          <li><a href="#">Về Tôi</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Liên Hệ</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">Xin Chào</p>
+          <h1 class="title">
+            Tôi là<span> Quốc Vinh<br /></span> Sinh Viên Ngành Thương Mại Điện Tử
+          </h1>
+          <p class="description">
+            Tôi là Nguyễn Quốc Vinh, sinh ra tại Vĩnh Long. Tính cách vui vẻ hòa đồng, dễ mến và đẹp trai. Kỹ năng mà tôi có bao gồm tin học văn phòng s ử dụng thành thạo các phần mềm văn phòng Thiết kế đồ họa: Có khả năng sử dụng các phần mềm thiết kế như Photoshop, Illustrator, Canva,... để tạo ra các sản phẩm sáng tạo và đẹp mắt. Kỹ năng giao tiếp: Giao tiếp tốt, có khả năng diễn đạt lưu loát, dễ hiểu, tạo thiện cảm với người đối diện. 
+          </p>
+          
+          <div class="action__btns">
+            <button class="hire__me">Xem thêm</button>
+            <button class="portfolio">Portfolio</button>
+            <title>ĐÓNG GÓP</title>
+            <style>
+                #danh-gia {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                }
+        
+                #danh-gia h3 {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
+        
+                #danh-gia ul {
+                    list-style: none;
+                    padding: 0;
+                }
+        
+                #danh-gia ul li {
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                }
+        
+                #danh-gia ul li .avatar {
+                    float: left;
+                    margin-right: 10px;
+                }
+        
+                #danh-gia ul li .avatar img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+        
+                #danh-gia ul li .noi-dung {
+                    overflow: hidden;
+                }
+        
+                #danh-gia ul li .noi-dung p {
+                    margin-bottom: 5px;
+                }
+        
+                #danh-gia ul li .noi-dung strong {
+                    font-weight: bold;
+                }
+        
+                #danh-gia form {
+                    margin-top: 10px;
+                }
+        
+                #danh-gia form input {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                }
+        
+                #danh-gia form button {
+                    margin-left: 10px;
+                    padding: 5px 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    background-color: #004a9e;
+                    color: #fff;
+                }
+            </style>
+        </head>
+        <body>
+<p></p>
+            <div id="danh-gia">
+                <center> <h3>Để Lại Thông Tin</h3>
+                <ul></ul>
+                 <form>
+                    <input type="text" id="name" placeholder="Tên của bạn...">
+                    <input type="text" id="comment" placeholder="Viết bình luận của bạn...">
+                    <button type="submit">Gửi</button>
+                </form>  </center>
+            </div>
+        
+            <script>
+                const form = document.querySelector("#danh-gia form");
+                const ul = document.querySelector("#danh-gia ul");
+        
+                form.addEventListener("submit", (event) => {
+                    event.preventDefault();
+        
+                    // Lấy nội dung bình luận và tên người bình luận
+                    const name = document.querySelector("#name").value;
+                    const comment = document.querySelector("#comment").value;
+        
+                    // Tạo đối tượng Date để lấy thời gian hiện tại
+                    const currentDate = new Date();
+                    const timestamp = currentDate.toLocaleString();
+        
+                    // Tạo phần tử HTML cho bình luận mới
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                        <div class="noi-dung">
+                            <p><strong>${name}</strong>: ${comment}</p>
+                            <p><em>${timestamp}</em></p>
+                        </div>
+                    `;
+        
+                    // Thêm phần tử bình luận mới vào danh sách
+                    ul.appendChild(li);
+                  // Xóa nội dung input
+                    document.querySelector("#name").value = "";
+                    document.querySelector("#comment").value = "";
+                });
+            </script>
+        </body>
+          </div>
+        </div>
+        
+        <div class="image">
+          <img src="anh/vinh.jpg" alt="vinh" />
+          
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
